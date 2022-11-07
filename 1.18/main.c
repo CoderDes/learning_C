@@ -2,23 +2,13 @@
 
 #define MAX_LEN 1000
 
-short should_iterate(short currChar, short len, short lim);
 short get_line(char line[], short lim);
-
-short should_iterate(short currChar, short len, short lim)
-{
-    // short is_len_below_limit = len < lim - 1;
-    // short is_end_of_file = (currChar = getchar()) == EOF;
-    // short is_new_line = currChar == '\n';
-    // return is_len_below_limit && !is_end_of_file && !is_new_line;
-    return len < lim - 1 && (currChar=getchar()) != EOF && currChar != '\n';
-}
 
 short get_line(char line[], short lim) {
     short currChar, prevChar;
     short isDoubleSpace = 0, isTab = 0, len = 0;
     
-    for (;len < lim - 1 && (currChar=getchar()) != EOF && currChar != '\n'; ++len) {
+    for (;len < lim - 1 && (currChar = getchar() ) != EOF && currChar != '\n'; ++len) {
         isDoubleSpace = prevChar == currChar && currChar == ' ';
         isTab = currChar == '\t';
         if (isDoubleSpace || isTab) {
