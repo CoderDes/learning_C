@@ -4,8 +4,6 @@
 
 short isValidCombination(char prev, char curr);
 
-/*YO*/
-
 // comment in C
     // 1) all between /* and */
     // 2) double slashes RIGHT AFTER \n
